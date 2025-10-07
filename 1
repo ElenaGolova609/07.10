@@ -1,0 +1,149 @@
+#include <iostream>
+#include <stack>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+
+int main(){
+    
+    srand(time(0));
+    
+    std::stack<std::string> imena;
+    imena.push("Ivanov_Ivan");
+    imena.push("Petrov_Petr");
+    imena.push("Sidorov_Sidor");
+    imena.push("Smirnov_Alexey");
+    imena.push("Kuznetsov_Dmitry");
+    imena.push("Popov_Vladimir");
+    imena.push("Vasilev_Andrey");
+    imena.push("Fedorov_Mikhail");
+    imena.push("Morozov_Nikolay");
+    imena.push("Lebedev_Egor");
+    imena.push("Solovyev_Gleb");
+    imena.push("Novikov_Konstantin");
+    imena.push("Romanov_Yury");
+    imena.push("Stepanov_Ilya");
+    imena.push("Nikolaev_Timur");
+    imena.push("Vorobyev_Semen");
+    imena.push("Medvedev_Roman");
+    imena.push("Volkov_Oleg");
+    imena.push("Alekseev_Danil");
+    imena.push("Makarov_Maxim");
+    imena.push("Kovalenko_Artyom");
+    imena.push("Zaytsev_Luka");
+    imena.push("Selivanov_Filipp");
+    imena.push("Nesterov_Emelyan");
+    imena.push("Orlov_Boris");
+    imena.push("Bolshakov_Efim");
+    imena.push("Meshcheryakov_Zahar");
+    imena.push("Savchenko_Vitaliy");
+    imena.push("Titov_Edward");
+    imena.push("Grishin_Stepan");
+    imena.push("Yakimov_Leonid");
+    imena.push("Plotnikov_Denis");
+    imena.push("Sergeev_Pavel");
+    imena.push("Bondarenko_Anatoly");
+    imena.push("Prokhorov_Vasily");
+    imena.push("Kalinin_Vadim");
+    imena.push("Vinogradov_Ruslan");
+    imena.push("Ryabov_Sergey");
+    imena.push("Trofimov_Ernest");
+    imena.push("Demidov_Veniamin");
+    imena.push("Bogdanov_Daniil");
+    imena.push("Melnikov_Platon");
+    imena.push("Chernyshov_Tihon");
+    imena.push("Belov_Arseniy");
+    imena.push("Gorbunov_Efrem");
+    imena.push("Starikov_Gavriil");
+    imena.push("Krasnov_German");
+    imena.push("Ponomarev_Svyatoslav");
+    imena.push("Ermakov_Lev");
+    imena.push("Sokolov_Victor");
+    imena.push("Osipov_Miron");
+    imena.push("Dubovoy_Afanasy");
+    imena.push("Shilov_Evdokiya");
+    imena.push("Khromov_Foma");
+    imena.push("Ignatov_Isaak");
+    imena.push("Matveyev_Kirill");
+    imena.push("Karavaev_Aleksey");
+    imena.push("Larin_Leonard");
+    imena.push("Antonov_Matyushka");
+    imena.push("Skripkin_Petrus");
+    imena.push("Rybakov_Prokopy");
+    imena.push("Denisov_Stanyukovich");
+    imena.push("Frolov_Ustin");
+    imena.push("Usachev_Hermogen");
+    imena.push("Abramov_Julian");
+    imena.push("Zharkov_Svetoslav");
+    imena.push("Likhachev_Christopher");
+    imena.push("Potapov_Constantine");
+    imena.push("Shevchenko_Valentin");
+    imena.push("Karpov_Xenophont");
+    imena.push("Polyakov_Yaropolk");
+    imena.push("Tarasov_Spyridon");
+    imena.push("Baryshnikov_Simon");
+    imena.push("Filatov_Ferapontovich");
+    imena.push("Belyayev_Veremyi");
+    imena.push("Nosov_Yakov");
+    imena.push("Gusev_Gennady");
+    imena.push("Bykov_Tomashevich");
+    imena.push("Timofeev_Salomon");
+    imena.push("Baranov_Epifan");
+    imena.push("Ovsyanikov_Stephen");
+    imena.push("Silin_Sebastian");
+    imena.push("Dobrynya_Peresvet");
+    imena.push("Kiselev_Tretyakov");
+    imena.push("Vinokurov_Bazilevich");
+    imena.push("Sinitsyn_Shakhmatov");
+    imena.push("Kireev_Putyrsky");
+    imena.push("Polonsky_Chertkov");
+    imena.push("Evgrafov_Shitov");
+    imena.push("Dodonov_Tsyganov");
+    imena.push("Grebenshchikov_Titov");
+    imena.push("Kharlamov_Losev");
+    imena.push("Bobrov_Samsonov");
+    imena.push("Safronov_Repnin");
+    imena.push("Vlasov_Volkodav");
+    imena.push("Kazantsev_Berezin");
+    imena.push("Chirkov_Solonin");
+    imena.push("Oparin_Pustovoit");
+    imena.push("Kabanov_Shepelev");
+    imena.push("Zhaba_Aleks");
+    imena.push("Zhirniy_Vlad");
+    imena.push("Shadow_Aleks");
+    
+    int D;
+    std::cin >> D;
+    
+    
+    if (D > 101){
+        return 0;
+    }
+    
+    std::cout << "Будет" << " " << D << " " << "друга" << std::endl;
+    
+    double sum1 = 0, sum2 = 0, sum3 = 0;
+    
+    std::cout << "Информация по ним:" << std::endl;
+    
+    for(int i = 0; i < D; i++) {
+        int g1 = rand() % 5 + 1;
+        int g2 = rand() % 5 + 1;
+        int g3 = rand() % 5 + 1;
+    
+    sum1 += g1;
+    sum2 += g2;
+    sum3 += g3;
+    
+    std::cout << imena.top() << " = " << g1 << " " << g2 << " " << g3 << std::endl;
+    imena.pop();
+    }
+    
+    double avg1 = sum1 / D;
+    double avg2 = sum2 / D;
+    double avg3 = sum3 / D;
+    
+    std::cout << "Средние баллы" << ":" << avg1 << " " << avg2 << " " << avg3 << std::endl;
+    
+    return 0;    
+}
